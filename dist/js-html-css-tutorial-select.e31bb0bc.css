@@ -1,0 +1,84 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+body {
+  font-family: "Roboto", sans-serif;
+  box-sizing: border-box;
+}
+
+.app {
+  padding-top: 5rem;
+  display: flex;
+  justify-content: center;
+}
+
+.wrap {
+  width: 500px;
+}
+
+.select {
+  position: relative;
+  z-index: 10;
+  width: 100%;
+}
+.select.opened .select__backdrop {
+  display: block;
+}
+.select.opened .select__input {
+  border-bottom-color: transparent;
+}
+.select.opened .select__dropdown {
+  display: block;
+}
+.select__backdrop {
+  position: fixed;
+  z-index: -1;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: none;
+  background-color: transparent;
+}
+.select__input {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 46px;
+  padding: 0 1rem;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.select__dropdown {
+  display: none;
+  position: absolute;
+  top: 46px;
+  right: 0;
+  left: 0;
+  max-height: 200px;
+  overflow-y: auto;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 2px 3px 5px rgba(0, 0, 0, 0.3);
+}
+.select__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.select__item {
+  padding: 1rem;
+  background-color: #fff;
+  border-bottom: 1px solid #ccc;
+}
+.select__item.selected {
+  background-color: bisque;
+}
+.select__item:hover {
+  background-color: #eee;
+  cursor: pointer;
+  transition: 0.15s background-color ease-in;
+}
+
+/*# sourceMappingURL=/js-html-css-tutorial-select.e31bb0bc.css.map */
